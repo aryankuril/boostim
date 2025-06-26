@@ -1,10 +1,58 @@
 "use client";
 
-import { useState } from "react";
+import { useState ,useRef } from "react";
 import emailjs from "@emailjs/browser";
+import confetti from "canvas-confetti";
 
 
 const ContactUs = () => {
+
+    const shootRealisticConfetti = () => {
+        const count = 200;
+        const defaults = {
+            origin: { x: 0.8, y: 0.2 }
+        };
+
+        function fire(particleRatio, opts) {
+            confetti({
+                ...defaults,
+                ...opts,
+                particleCount: Math.floor(count * particleRatio)
+            });
+        }
+
+        fire(0.25, {
+            spread: 26,
+            startVelocity: 55,
+        });
+        fire(0.2, {
+            spread: 60,
+        });
+        fire(0.35, {
+            spread: 100,
+            decay: 0.91,
+            scalar: 0.8
+        });
+        fire(0.1, {
+            spread: 120,
+            startVelocity: 25,
+            decay: 0.92,
+            scalar: 1.2
+        });
+        fire(0.1, {
+            spread: 120,
+            startVelocity: 45,
+        });
+    }
+
+
+    const handleSubmit = () => {
+        // your other functions here
+
+        shootRealisticConfetti();
+    }
+
+
   const [subject, setSubject] = useState("general");
   const [formData, setFormData] = useState({
     firstName: "",
@@ -216,6 +264,7 @@ const sendEmail = async (e) => {
 
               <button
                 type="submit"
+                 onClick={() => handleSubmit()}
                 className="inline-flex lg:ml-85 px-5 py-3 justify-center items-center gap-[25px] rounded-[70px] bg-[#99EA48] text-black font-semibold hover:bg-[#84CC16] transition"
               >
                 Get Started
@@ -244,6 +293,8 @@ const sendEmail = async (e) => {
                   </svg>
                 </span>
               </button>
+
+               
             </form>
           </div>
         </div>

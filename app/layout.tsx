@@ -30,7 +30,13 @@ export default function RootLayout({
     <html lang="en">
       <body>
         
-  <div className=" font-['Plus_Jakarta_Sans'] bg-[url('/images/Main-bg.png')] ">
+  <div
+  className="
+    font-['Plus_Jakarta_Sans'] 
+    bg-[#F3F3F3]                 // Mobile Background Color
+    sm:bg-[url('/images/Main-bg.png')] // Desktop Image Background starts from small screens (640px and above)
+  "
+>
 
             <Header />
           

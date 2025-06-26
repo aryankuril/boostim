@@ -67,23 +67,23 @@ const FirstSection = () => {
       {/* <div className=" -mr-100 lg:mr-0 flex justify-center items-center relative"> */}
       <div className="flex-1 -mr-5 lg:mr-0 relative w-full right-10  gap-10 mt-45   lg:mt-0 flex justify-center items-center">       
         {/* Semi Circle Decorative Image */}
-         <div className="absolute -top-33 lg:-top-56 lg:right-62 right-38  w-42  md:w-66 lg:px-0  ">
+         <div className="absolute -top-33 lg:-top-56 md:-top-34 lg:right-62 right-38 md:right-60  w-42 lg:w-65 md:w-43 lg:px-0  ">
         <img src="/images/Rectangle.png" alt="Decorative Shape" className="w-64 md:w-80 relative z-0" />
         
 
         {/* Trending Logo */}
         </div>
 {/* <div className="absolute -top-65 right-20  md:w-55 "> */}
-        <img src="/images/trending.png" alt="Trending Icon" className="absolute -top-40 lg:-top-65 right-42 lg:right-65 w-22 md:w-40 z-10" />
+        <img src="/images/trending.png" alt="Trending Icon" className="absolute -top-40 lg:-top-65 md:-top-40 right-42 lg:right-65 md:right-62 w-22 lg:w-35 md:w-20 z-10" />
         {/* </div> */}
         {/* Number and Text Box */}
         <div className="absolute -top-34 lg:-top-56   -right-6 lg:-right-6 bg-white rounded-lg p-4 shadow-md text-center h-39 lg:h-59 w-41 md:w-63">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mt-1 sm:mt-4 md:mt-5 mb-3 sm:mb-4 md:mb-5">{count}+</h2>
-          <p className="text-gray-600 text-sm mt-1 leading-tight">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mt-1 sm:mt-1 md:mt-1 mb-1 sm:mb-1 lg:mb-5 md:mb-1">{count}+</h2>
+          <p className="text-gray-600 text-sm lg:text-[20px] mt-1  leading-tight">
             some big companies that we work with, and trust us very much
           </p>
             {/* Progress Bar */}
-  <div className="w-full h-2 lg:mt-10 mt-3 bg-gray-300 rounded-full overflow-hidden">
+  <div className="w-full h-2 lg:mt-5 mt-3  bg-gray-300 rounded-full overflow-hidden">
     <div
       className="h-full bg-black transition-all duration-1000"
       style={{
@@ -94,7 +94,7 @@ const FirstSection = () => {
         </div>
 
         {/* Black Card Image */}
-        <img src="/images/growth.png" alt="Black Card" className="absolute -bottom-60 -right-7  w-[550px] h-[210px]" />
+        <img src="/images/growth.png" alt="Black Card" className="absolute -bottom-60 -right-7  md:w-[450px] lg:w-[550px] h-[210px]" />
       </div>
       {/* </div> */}
       

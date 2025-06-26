@@ -88,11 +88,15 @@ export const Header = () => {
           <span>Resources</span>
           <ChevronDown size={18} />
         </div>
-        <Link href="/contact-us">
-          <button className="mt-8 rounded-full px-6 py-2 border text-white bg-black hover:bg-white border-black hover:text-black transition">
-            Get started
-          </button>
-        </Link>
+       <Link href="/contact-us" legacyBehavior>
+  <a
+    onClick={() => setMobileMenuOpen(false)}
+    className="mt-8 rounded-full px-6 py-2 border w-40 text-white bg-black hover:bg-white border-black hover:text-black transition text-center"
+  >
+    Get started
+  </a>
+</Link>
+
       </div>
     </div>
   )}

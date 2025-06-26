@@ -58,10 +58,11 @@ const SixthSection = () => {
               <span className="w-2 h-2 rounded-full bg-blue-500"></span>
             <span className="text-xs text-gray-500">5 min read</span>
           </div>
-         <h3 className="text-[#010205] font-['Plus_Jakarta_Sans'] text-[26px] w-[300px] font-semibold leading-[120%] tracking-[-0.03em] mb-4">
-           How a Digital Marketing Agency Can Boost Your Business
-          </h3>
-          <p className="text-sm text-[#878C91] mb-6 mt-8 w-[200px]">
+        <h3 className="text-[#010205] font-['Plus_Jakarta_Sans'] text-[20px] lg:text-[26px]  max-w-[90%] sm:max-w-[300px] font-semibold leading-[120%] tracking-[-0.03em] mb-4">
+  How a Digital Marketing Agency Can Boost Your Business
+</h3>
+
+          <p className="text-[12px] lg:text-sm text-[#878C91] mb-15  lg:mb-6 mt-8 w-[200px]">
             We are the top digital marketing agency for branding corp. We offer a full range engine...
           </p>
           <div className="flex justify-end -mt-15 ">
@@ -86,10 +87,10 @@ const SixthSection = () => {
             <span className="w-2 h-2 rounded-full bg-orange-500"></span>
             <span className="text-xs text-gray-500">5 min read</span>
           </div>
-         <h3 className="text-[#010205] font-['Plus_Jakarta_Sans'] text-[26px] w-[300px] font-semibold leading-[120%] tracking-[-0.03em] mb-4">
+       <h3 className="text-[#010205] font-['Plus_Jakarta_Sans'] text-[20px] lg:text-[26px]  max-w-[90%] sm:max-w-[300px] font-semibold leading-[120%] tracking-[-0.03em] mb-4">
             The Latest Trends and Strategies with a Digital Marketing Agency
           </h3>
-          <p className="text-sm text-[#878C91] mb-6 mt-8 w-[200px]">
+           <p className="text-[12px] lg:text-sm text-[#878C91] mb-15  lg:mb-6 mt-8 w-[200px]">
             Working with this digital marketing agency has been a true partnership. They have tak...
           </p>
           <div className="flex justify-end -mt-15 ">
@@ -114,10 +115,10 @@ const SixthSection = () => {
             <span className="w-2 h-2 rounded-full bg-purple-500"></span>
             <span className="text-xs text-gray-500">5 min read</span>
           </div>
-        <h3 className="text-[#010205] font-['Plus_Jakarta_Sans'] w-[300px] text-[26px] font-semibold leading-[120%] tracking-[-0.03em] ">
+        <h3 className="text-[#010205] font-['Plus_Jakarta_Sans'] text-[20px] lg:text-[26px]  max-w-[90%] sm:max-w-[300px] font-semibold leading-[120%] tracking-[-0.03em] mb-4">
             Maximizing ROI with the Expertise of a Digital Marketing Agency
           </h3>
-          <p className="text-sm text-[#878C91] mt-8 w-[200px]">
+           <p className="text-[12px] lg:text-sm text-[#878C91] mb-15  lg:mb-6 mt-8 w-[200px]">
             What sets this digital marketing agency apart is their commitment to transparency a...
           </p>
           <div className="flex justify-end -mt-15 ">

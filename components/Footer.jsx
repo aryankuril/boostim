@@ -25,7 +25,7 @@ export const  Footer = () => {
         </div>
 
         {/* Navigation Links */}
-        <div className="space-y-1 lg:ml-70  ">
+        <div className="space-y-1 lg:ml-70 ml-1 md:ml-45  ">
           <h4 className="text-[#010205] font-semibold text-[18px] mt-1 mb-7">Navigation</h4>
           <ul className="space-y-2 text-[#878C91] text-[14px]">
             <li><a href="#">Service</a></li>
@@ -37,7 +37,7 @@ export const  Footer = () => {
         </div>
 
         {/* License Links */}
-        <div className="space-y-4 ml-35 -mt-54 sm:mt-0"> 
+        <div className="space-y-4 ml-30 md:ml-20 lg:ml-30 -mt-54 sm:mt-0"> 
           <h4 className="text-[#010205] font-semibold text-[18px] mt-1 mb-7">Licence</h4>
           <ul className="space-y-2 text-[#878C91] text-[14px]">
             <li><a href="#">Privacy Policy</a></li>
