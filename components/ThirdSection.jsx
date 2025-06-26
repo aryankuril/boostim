@@ -8,65 +8,41 @@ const ThirdSection = () => {
   const sectionRef = useRef(null); // Ref for the entire ThirdSection to detect its vertical position
 
   useEffect(() => {
-    const handleWheel = (event) => {
-      const sectionElement = sectionRef.current;
-      const scrollableElement = scrollRef.current;
+const handleWheel = (event) => {
+  const sectionElement = sectionRef.current;
+  const scrollableElement = scrollRef.current;
 
-      // Ensure both refs are attached to their respective DOM elements
-      if (!sectionElement || !scrollableElement) {
-        return;
-      }
+  if (!sectionElement || !scrollableElement) return;
 
-      // Get the bounding rectangle of the entire section to determine its position relative to the viewport
-      const sectionRect = sectionElement.getBoundingClientRect();
+  const sectionRect = sectionElement.getBoundingClientRect();
+  const scrollableRect = scrollableElement.getBoundingClientRect();
+  const maxScrollLeft = scrollableElement.scrollWidth - scrollableElement.clientWidth;
+  const deltaY = event.deltaY;
 
-      // Determine if the section should currently handle horizontal scrolling.
-      // This condition activates the horizontal scroll when:
-      // 1. The section's top is at or above the viewport's top, and it's still visible (suggesting it's "pinned" or actively in view).
-      // 2. The section is currently entering the viewport from the bottom.
-      const isActiveForHorizontalScroll = (
-        (sectionRect.top <= 0 && sectionRect.bottom > 0) ||
-        (sectionRect.top > 0 && sectionRect.top < window.innerHeight)
-      );
+  // Scroll only when the scrollable container is mostly in view (adjust threshold as needed)
+  const isScrollableVisible =
+    scrollableRect.top >= 0 &&
+    scrollableRect.bottom <= window.innerHeight;
 
-      // Calculate the maximum possible horizontal scroll position
-      const maxScrollLeft = scrollableElement.scrollWidth - scrollableElement.clientWidth;
+  if (isScrollableVisible && maxScrollLeft > 0) {
+    let preventVerticalScroll = false;
 
-      // Determine the vertical scroll delta (how much the mouse wheel scrolled)
-      const deltaY = event.deltaY;
+    if (deltaY > 0 && scrollableElement.scrollLeft < maxScrollLeft) {
+      preventVerticalScroll = true;
+      scrollableElement.scrollLeft += deltaY;
+      scrollableElement.scrollLeft = Math.min(maxScrollLeft, scrollableElement.scrollLeft);
+    } else if (deltaY < 0 && scrollableElement.scrollLeft > 0) {
+      preventVerticalScroll = true;
+      scrollableElement.scrollLeft += deltaY;
+      scrollableElement.scrollLeft = Math.max(0, scrollableElement.scrollLeft);
+    }
 
-      // If the section is active for horizontal scrolling, and there's content to scroll horizontally
-      if (isActiveForHorizontalScroll && maxScrollLeft > 0) {
-        let preventVerticalScroll = false; // Flag to decide if vertical page scroll should be prevented
+    if (preventVerticalScroll) {
+      event.preventDefault();
+    }
+  }
+};
 
-        // Scrolling down (deltaY > 0)
-        if (deltaY > 0) {
-          // If the horizontal content is not yet fully scrolled to the right
-          if (scrollableElement.scrollLeft < maxScrollLeft) {
-            preventVerticalScroll = true; // Prevent the default vertical page scroll
-            scrollableElement.scrollLeft += deltaY; // Apply vertical delta to horizontal scroll
-            // Clamp scrollLeft to prevent overshooting beyond the maximum scroll position
-            scrollableElement.scrollLeft = Math.min(maxScrollLeft, scrollableElement.scrollLeft);
-          }
-        }
-        // Scrolling up (deltaY < 0)
-        else if (deltaY < 0) {
-          // If the horizontal content is not yet fully scrolled to the left
-          if (scrollableElement.scrollLeft > 0) {
-            preventVerticalScroll = true; // Prevent the default vertical page scroll
-            scrollableElement.scrollLeft += deltaY; // Apply vertical delta to horizontal scroll
-            // Clamp scrollLeft to prevent overshooting below the minimum scroll position (0)
-            scrollableElement.scrollLeft = Math.max(0, scrollableElement.scrollLeft);
-          }
-        }
-
-        // If we decided to handle the scroll horizontally, prevent the browser's default vertical scroll.
-        // This ensures the page doesn't scroll vertically while the horizontal content is being scrolled.
-        if (preventVerticalScroll) {
-          event.preventDefault();
-        }
-      }
-    };
 
     // Add the wheel event listener to the window.
     // passive: false is crucial as it allows `event.preventDefault()` to work,
