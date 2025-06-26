@@ -23,7 +23,7 @@ const SixthSection = () => {
   //   },
   // ];
   return (
- <section className="max-w-7xl mx-auto  px-4  font-['Plus_Jakarta_Sans']">
+ <section className="max-w-7xl mx-auto  px-2 sm:px-0 lg:px-10   font-['Plus_Jakarta_Sans']">
       
       {/* Top Heading + Subtext + Button */}
       <div className="flex flex-col lg:mt-30 mt-20 lg:flex-row justify-between items-start lg:items-center mb-12 gap-6">
@@ -35,7 +35,7 @@ const SixthSection = () => {
 
         {/* Subtext + Button */}
         <div className="flex flex-col items-start mt-5 gap-10">
-          <p className="text-[#878C91] text-[16px] font-medium leading-[180%] max-w-md">
+          <p className="text-[#878C91] text-[16px] font-medium leading-[180%] max-w-md overflow-hidden ">
             We are the top digital marketing agency for branding corp. We offer a full range of services to help clients improve their search engine rankings and drive more traffic to their websites.
           </p>
         <button className="border border-black rounded-full  px-[36px] py-[10px] text-sm hover:bg-black hover:text-white transition">
@@ -50,28 +50,35 @@ const SixthSection = () => {
 
 
   {/* Card Example */}
-  <div className="bg-white p-6 rounded-2xl shadow-sm flex flex-col justify-between h-[280px] border border-gray-200">
-    <div className="flex items-center justify-between mb-4">
-      <span className="w-2 h-2 rounded-full bg-blue-500"></span>
-      <span className="text-xs text-gray-500">5 min read</span>
-    </div>
+ 
 
-    <h3 className="text-[#010205] font-['Plus_Jakarta_Sans'] text-[22px] sm:text-[24px] md:text-[26px] font-semibold leading-[120%] tracking-[-0.03em] mb-4">
-      How a Digital Marketing Agency Can Boost Your Business
-    </h3>
 
-    <p className="text-sm text-[#878C91] mb-6 mt-4">
-      We are the top digital marketing agency for branding corp. We offer a full range engine...
-    </p>
-
-    <div className="flex justify-end">
-      <button className="w-12 h-9 rounded-full border border-black text-black flex items-center justify-center hover:bg-black hover:text-white transition">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-        </svg>
-      </button>
-    </div>
-  </div>
+    <div className="bg-white p-6 rounded-2xl shadow-sm flex flex-col justify-between  h-[280px] border border-gray-200">
+          <div className="flex items-center justify-between mb-4">
+              <span className="w-2 h-2 rounded-full bg-blue-500"></span>
+            <span className="text-xs text-gray-500">5 min read</span>
+          </div>
+         <h3 className="text-[#010205] font-['Plus_Jakarta_Sans'] text-[26px] w-[300px] font-semibold leading-[120%] tracking-[-0.03em] mb-4">
+           How a Digital Marketing Agency Can Boost Your Business
+          </h3>
+          <p className="text-sm text-[#878C91] mb-6 mt-8 w-[200px]">
+            We are the top digital marketing agency for branding corp. We offer a full range engine...
+          </p>
+          <div className="flex justify-end -mt-15 ">
+            <button className="w-16 h-9  rounded-full border border-black text-black flex items-center justify-center hover:bg-black hover:text-white transition">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-3 w-10"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </button>
+          </div>
+        </div>
 
         {/* Card 2 */}
         <div className="bg-white p-6 rounded-2xl shadow-sm flex flex-col justify-between  h-[280px] border border-gray-200">

@@ -67,7 +67,7 @@ const FirstSection = () => {
       {/* <div className=" -mr-100 lg:mr-0 flex justify-center items-center relative"> */}
       <div className="flex-1 -mr-5 lg:mr-0 relative w-full right-10  gap-10 mt-45   lg:mt-0 flex justify-center items-center">       
         {/* Semi Circle Decorative Image */}
-         <div className="absolute -top-33 lg:-top-56 lg:right-62 right-38  w-42  md:w-66 ">
+         <div className="absolute -top-33 lg:-top-56 lg:right-62 right-38  w-42  md:w-66 lg:px-0  ">
         <img src="/images/Rectangle.png" alt="Decorative Shape" className="w-64 md:w-80 relative z-0" />
         
 
