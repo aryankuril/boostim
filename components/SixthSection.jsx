@@ -26,7 +26,7 @@ const SixthSection = () => {
  <section className="max-w-7xl mx-auto  px-2 sm:px-0 lg:px-10   font-['Plus_Jakarta_Sans']">
       
       {/* Top Heading + Subtext + Button */}
-      <div className="flex flex-col lg:mt-30 mt-20 lg:flex-row justify-between items-start lg:items-center mb-12 gap-6">
+      <div className="container flex flex-col lg:mt-30 mt-20 lg:flex-row justify-between items-start lg:items-center mb-12 gap-6">
         
         {/* Heading */}
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#010205] leading-[130%] tracking-[-0.03em] max-w-2xl">
@@ -46,7 +46,7 @@ const SixthSection = () => {
       </div>
 
       {/* Cards Grid */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 w-full">
+    <div className="container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 w-full">
 
 
   {/* Card Example */}
