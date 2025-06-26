@@ -151,7 +151,7 @@ const sendEmail = async (e) => {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm text-gray-600 mt-5">Email</label>
+                  <label className="block text-sm text-gray-600 lg:mt-5 mt-1">Email</label>
                   <input
                     type="email"
                     name="email"
@@ -162,7 +162,7 @@ const sendEmail = async (e) => {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm text-gray-600 mt-5">
+                  <label className="block text-sm text-gray-600 lg:mt-5 mt-1">
                     Phone Number
                   </label>
                   <input
