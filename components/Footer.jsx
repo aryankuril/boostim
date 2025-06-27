@@ -30,7 +30,7 @@ export const  Footer = () => {
           <ul className="space-y-2 text-[#878C91] text-[14px]">
             <li><a href="#">Service</a></li>
             <li><a href="#">Agency</a></li>
-            <li><a href="#">Case Study</a></li>
+            <li><a href="#">CaseStudy</a></li>
             <li><a href="#">Resource</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
@@ -59,7 +59,7 @@ export const  Footer = () => {
               Hey@boostim.com
             </li>
             <li className="flex items-center gap-3">
-              <Image src="/icons/add.png" alt="Location" width={16} height={16} />
+              <Image src="/icons/add.png" alt="Location" className="-mt-5" width={12} height={12} />
               2972 Westheimer Rd. Santa Ana,<br />Illinois 85486
             </li>
           </ul>
