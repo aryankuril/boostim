@@ -77,7 +77,7 @@ const FirstSection = () => {
 
   {/* Number and Text Box */}
   <div className="absolute -top-34 lg:-top-48 xl:-top-56 -right-6 lg:-right-6 bg-white rounded-lg p-4 shadow-md text-center h-39 lg:h-50 xl:h-59 w-41 xl:w-63 lg:w-58 md:w-63">
-    <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mt-1 mb-1">{count}+</h2>
+    <h2 className="text-4xl text-[#010205] sm:text-5xl md:text-6xl lg:text-7xl font-bold mt-1 mb-1">{count}+</h2>
     <p className="text-gray-600 text-sm lg:text-[20px] mt-1 leading-tight">
       some big companies that we work with, and trust us very much
     </p>

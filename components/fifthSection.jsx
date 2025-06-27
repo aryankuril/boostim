@@ -83,15 +83,15 @@ const fifthSection = () => {
         onClick={() => toggleFaq(index)}
         className="flex justify-between items-center cursor-pointer"
       >
-        <h3 className="font-semibold text-[24px] w-120">{faq.question}</h3>
-        <span className="text-2xl">
+        <h3 className="font-semibold text-[#010205] text-[24px] w-120">{faq.question}</h3>
+        <span className="text-2xl text-[#878C91]">
           {activeIndex === index ? "−" : "+"}
         </span>
       </div>
 
       {activeIndex === index && (
         <motion.p
-          className="mt-4 text-gray-600 text-[16px]"
+          className="mt-4  text-[16px]"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, ease: "easeOut" }}
