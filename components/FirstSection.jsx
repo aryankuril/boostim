@@ -31,7 +31,7 @@ const FirstSection = () => {
 
   {/* LEFT CONTENT */}
   <div className="flex-1 max-w-xl text-center lg:text-left z-10">
-    <h1 className="text-[36px] sm:text-[48px] md:text-[60px] lg:text-[72px] leading-[100%] font-semibold tracking-[-2px] text-[#010205] mb-8 font-['Plus Jakarta Sans']">
+    <h1 className="text-[36px]  sm:text-[48px] md:text-[60px] lg:text-[72px] leading-[100%] font-semibold tracking-[-2px] text-[#010205] mb-8 font-['Plus Jakarta Sans']">
       Stay ahead of the curve with our forward-thinking
     </h1>
 
@@ -64,38 +64,33 @@ const FirstSection = () => {
     </div>
   </div>
                 {/* right section */}
-      {/* <div className=" -mr-100 lg:mr-0 flex justify-center items-center relative"> */}
-      <div className="flex-1 -mr-5 lg:mr-0 relative w-full right-10  gap-10 mt-45   lg:mt-0 flex justify-center items-center">       
-        {/* Semi Circle Decorative Image */}
-         <div className="absolute -top-33 lg:-top-56 md:-top-34 lg:right-62 right-38 md:right-60  w-42 lg:w-65 md:w-43 lg:px-0  ">
-        <img src="/images/Rectangle.png" alt="Decorative Shape" className="w-64 md:w-80 relative z-0" />
-        
-
-        {/* Trending Logo */}
-        </div>
-{/* <div className="absolute -top-65 right-20  md:w-55 "> */}
-        <img src="/images/trending.png" alt="Trending Icon" className="absolute -top-40 lg:-top-65 md:-top-40 right-42 lg:right-65 md:right-62 w-22 lg:w-35 md:w-20 z-10" />
-        {/* </div> */}
-        {/* Number and Text Box */}
-        <div className="absolute -top-34 lg:-top-56   -right-6 lg:-right-6 bg-white rounded-lg p-4 shadow-md text-center h-39 lg:h-59 w-41 md:w-63">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mt-1 sm:mt-1 md:mt-1 mb-1 sm:mb-1 lg:mb-5 md:mb-1">{count}+</h2>
-          <p className="text-gray-600 text-sm lg:text-[20px] mt-1  leading-tight">
-            some big companies that we work with, and trust us very much
-          </p>
-            {/* Progress Bar */}
-  <div className="w-full h-2 lg:mt-5 mt-3  bg-gray-300 rounded-full overflow-hidden">
-    <div
-      className="h-full bg-black transition-all duration-1000"
-      style={{
-        width: `${(count / 230) * 70}%`, // converts count to % of max 230
-      }}
-    ></div>
+      <div className="flex-1 relative w-full gap-10 mt-45 lg:mt-0 flex justify-center items-center 
+  -mr-5 lg:mr-10 right-10 lg:-right-3 md:right-80 md:mx-auto">
+  
+  {/* Semi Circle Decorative Image */}
+  <div className="absolute -top-33 xl:-top-56 lg:-top-47 md:-top-34 lg:right-56 xl:right-62 right-38 md:right-60 w-42 lg:w-55 xl:w-65 md:w-43 lg:px-0">
+    <img src="/images/Rectangle.png" alt="Decorative Shape" className="w-64 md:w-80 relative z-0" />
   </div>
-        </div>
 
-        {/* Black Card Image */}
-        <img src="/images/growth.png" alt="Black Card" className="absolute -bottom-60 -right-7  md:w-[450px] lg:w-[550px] h-[210px]" />
-      </div>
+  {/* Trending Logo */}
+  <img src="/images/trending.png" alt="Trending Icon" className="absolute -top-40 xl:-top-65 lg:-top-55 md:-top-40 right-42 xl:right-65 lg:right-60 md:right-62 w-22 xl:w-35 lg:w-30 md:w-20 z-10" />
+
+  {/* Number and Text Box */}
+  <div className="absolute -top-34 lg:-top-48 xl:-top-56 -right-6 lg:-right-6 bg-white rounded-lg p-4 shadow-md text-center h-39 lg:h-50 xl:h-59 w-41 xl:w-63 lg:w-58 md:w-63">
+    <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mt-1 mb-1">{count}+</h2>
+    <p className="text-gray-600 text-sm lg:text-[20px] mt-1 leading-tight">
+      some big companies that we work with, and trust us very much
+    </p>
+    <div className="w-full h-2 xl:mt-7 lg:mt-3 mt-3 bg-gray-300 rounded-full overflow-hidden">
+      <div className="h-full bg-black transition-all duration-1000" style={{ width: `${(count / 230) * 70}%` }}></div>
+    </div>
+  </div>
+
+  {/* Black Card Image */}
+  <img src="/images/growth.png" alt="Black Card" className="absolute -bottom-60 -right-7 md:w-[450px] lg:w-[550px] h-[210px]" />
+
+</div>
+
       {/* </div> */}
       
     </section>

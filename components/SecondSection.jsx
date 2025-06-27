@@ -106,7 +106,7 @@ const CombinedSection = () => {
       className="container mx-auto max-w-7xl mt-75 lg:mt-30 flex flex-col gap-10"
     >
       {/* Top Row */}
-      <div className="container w-full max-w-6xl mx-auto flex flex-col lg:flex-row gap-6 lg:gap-20 text-left">
+      <div className="container w-full max-w-6xl  mx-auto flex flex-col lg:flex-row gap-6 lg:gap-20 md:items-center lg:items-left md:text-center xl:text-left text-left">
         <h1 className="flex-1 text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#010205] font-semibold leading-[130%] tracking-[-1.44px]">
           Provide the best service with <br /> out of the box ideas
         </h1>

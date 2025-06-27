@@ -61,17 +61,24 @@ const fifthSection = () => {
           </div>
         </div>
 
-        {/* Right Section */}
- <motion.div
+{/* Right Section */}
+<motion.div
   className="lg:w-6/12 space-y-4"
-  initial={{ opacity: 0, y: 50 }}  // Start hidden and moved down
-  whileInView={{ opacity: 1, y: 0 }}  // Fade in and move to original position
-  exit={{ opacity: 0, y: 50 }}  // Fade out, move down
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  exit={{ opacity: 0, y: 50 }}
   transition={{ duration: 0.8, ease: "easeOut" }}
-  viewport={{ once: false, amount: 0.2 }}  // Trigger when 20% visible
+  viewport={{ once: false, amount: 0.2 }}
 >
   {faqs.map((faq, index) => (
-    <div key={index} className="border-t border-black pt-4">
+    <motion.div
+      key={index}
+      className="border-t border-black pt-4"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.2 }}
+      viewport={{ once: true, amount: 0.2 }}
+    >
       <div
         onClick={() => toggleFaq(index)}
         className="flex justify-between items-center cursor-pointer"
@@ -83,14 +90,22 @@ const fifthSection = () => {
       </div>
 
       {activeIndex === index && (
-        <p className="mt-4 text-gray-600 text-[16px]">{faq.answer}</p>
+        <motion.p
+          className="mt-4 text-gray-600 text-[16px]"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
+        >
+          {faq.answer}
+        </motion.p>
       )}
-    </div>
+    </motion.div>
   ))}
-  
-  <div className="border-t border-black"></div>
+
+  <div className="border-t border-black">
+</div>
 </motion.div>
-      </div>
+</div>
     </section>
   )
 }

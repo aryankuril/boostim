@@ -81,7 +81,7 @@ const SixthSection = () => {
           </div>
         </div>
 
-        {/* Card 2 */}
+        {/* Card 3 */}
         <div className="bg-white p-6 rounded-2xl shadow-sm flex flex-col justify-between  h-[280px] border border-gray-200">
           <div className="flex items-center justify-between mb-4">
             <span className="w-2 h-2 rounded-full bg-orange-500"></span>
@@ -108,18 +108,16 @@ const SixthSection = () => {
             </button>
           </div>
         </div>
-
-        {/* Card 3 */}
-        <div className="bg-white p-6 rounded-2xl shadow-sm flex flex-col justify-between h-[280px] border border-gray-200">
-          <div className="flex items-center justify-between ">
+        <div className="bg-white p-6 rounded-2xl shadow-sm flex flex-col justify-between  h-[280px] border border-gray-200">
+          <div className="flex items-center justify-between mb-4">
             <span className="w-2 h-2 rounded-full bg-purple-500"></span>
             <span className="text-xs text-gray-500">5 min read</span>
           </div>
-        <h3 className="text-[#010205] font-['Plus_Jakarta_Sans'] text-[20px] lg:text-[26px]  max-w-[90%] sm:max-w-[300px] font-semibold leading-[120%] tracking-[-0.03em] mb-4">
+       <h3 className="text-[#010205] font-['Plus_Jakarta_Sans'] text-[20px] lg:text-[26px]  max-w-[90%] sm:max-w-[300px] font-semibold leading-[120%] tracking-[-0.03em] mb-4">
             Maximizing ROI with the Expertise of a Digital Marketing Agency
           </h3>
            <p className="text-[12px] lg:text-sm text-[#878C91] mb-15  lg:mb-6 mt-8 w-[200px]">
-            What sets this digital marketing agency apart is their commitment to transparency a...
+             What sets this digital marketing agency apart is their commitment to transparency a...
           </p>
           <div className="flex justify-end -mt-15 ">
             <button className="w-16 h-9  rounded-full border border-black text-black flex items-center justify-center hover:bg-black hover:text-white transition">
@@ -136,6 +134,8 @@ const SixthSection = () => {
             </button>
           </div>
         </div>
+
+        
 
       </div>
     </section>
