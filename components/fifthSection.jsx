@@ -68,7 +68,7 @@ const fifthSection = () => {
   whileInView={{ opacity: 1, y: 0 }}
   exit={{ opacity: 0, y: 50 }}
   transition={{ duration: 0.8, ease: "easeOut" }}
-  viewport={{ once: false, amount: 0.2 }}
+  viewport={{ once: false, amount: 0.2 }} // Repeats every time on scroll
 >
   {faqs.map((faq, index) => (
     <motion.div
@@ -77,7 +77,7 @@ const fifthSection = () => {
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.2 }}
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={{ once: false, amount: 0.2 }} // Repeats every time on scroll
     >
       <div
         onClick={() => toggleFaq(index)}
@@ -102,9 +102,9 @@ const fifthSection = () => {
     </motion.div>
   ))}
 
-  <div className="border-t border-black">
-</div>
+  <div className="border-t border-black"></div>
 </motion.div>
+
 </div>
     </section>
   )
