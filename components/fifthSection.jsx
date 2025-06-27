@@ -84,7 +84,7 @@ const fifthSection = () => {
         className="flex justify-between items-center cursor-pointer"
       >
         <h3 className="font-semibold text-[#010205] text-[24px] w-120">{faq.question}</h3>
-        <span className="text-2xl ">
+        <span className="text-2xl text-[#000000] ">
           {activeIndex === index ? "−" : "+"}
         </span>
       </div>

@@ -38,7 +38,7 @@ const SixthSection = () => {
           <p className="text-[#878C91] text-[16px] font-medium leading-[180%] max-w-md overflow-hidden ">
             We are the top digital marketing agency for branding corp. We offer a full range of services to help clients improve their search engine rankings and drive more traffic to their websites.
           </p>
-        <button className="border border-black rounded-full  px-[36px] py-[10px] text-[16px] text-[010205] hover:bg-black hover:text-white transition">
+        <button className="border border-black rounded-full  text-[#010205] px-[36px] py-[10px] text-[16px]  hover:bg-black hover:text-white transition">
   See more
 </button>
 
