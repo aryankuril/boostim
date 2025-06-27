@@ -51,8 +51,8 @@ const fifthSection = () => {
   questions to help our clients.
 </p>
 
-          <div className="flex gap-10">
-            <button className="border border-black rounded-full px-6 py-2 text-sm hover:bg-black hover:text-white transition">
+          <div className="flex gap-10 text-[#010205]  ">
+            <button className="border border-black rounded-full px-6 py-2 text-[16px] hover:bg-black hover:text-white transition">
               More Questions
             </button>
             <button className=" text-[16px] font-semibold underline hover:no-underline">
@@ -84,14 +84,14 @@ const fifthSection = () => {
         className="flex justify-between items-center cursor-pointer"
       >
         <h3 className="font-semibold text-[#010205] text-[24px] w-120">{faq.question}</h3>
-        <span className="text-2xl text-[#878C91]">
+        <span className="text-2xl ">
           {activeIndex === index ? "−" : "+"}
         </span>
       </div>
 
       {activeIndex === index && (
         <motion.p
-          className="mt-4  text-[16px]"
+          className="mt-4  text-[16px] text-[#878C91] "
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, ease: "easeOut" }}

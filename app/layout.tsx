@@ -1,19 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Plus_Jakarta_Sans } from 'next/font/google';
 import "./globals.css";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 
 
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const plusJakarta = Plus_Jakarta_Sans({
+  subsets: ['latin'],
+  variable: '--font-plus-jakarta',
 });
 
 export const metadata: Metadata = {
@@ -32,7 +27,7 @@ export default function RootLayout({
         
   <div
   className="
-    font-['Plus_Jakarta_Sans'] 
+    {plusJakarta.variable}
     bg-[#F3F3F3]                 // Mobile Background Color
     sm:bg-[url('/images/Main-bg.png')] // Desktop Image Background starts from small screens (640px and above)
   "

@@ -63,12 +63,13 @@ const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
       <div className="container max-w-4xl w-full  px-0 sm:px-0 md:px-5 lg:px-10  ">
         {/* Review Content */}
         {/* Added a fixed height to prevent layout shifts when review text length changes */}
-        <div className=" text-gray-800 text-xl sm:text-2xl lg:text-3xl leading-relaxed mb-8 sm:mb-10 font-medium h-48 sm:h-56 lg:h-64 flex items-start justify-start">
-          &quot;{currentReview.text}&quot;
-        </div>
+       <div className="text-[#010205] font-['Plus_Jakarta_Sans'] font-semibold leading-[160%] tracking-[-1.08px] text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] mb-8 sm:mb-10 h-auto flex items-start justify-start">
+  &quot;{currentReview.text}&quot;
+</div>
+
 
         {/* Reviewer Info and Navigation */}
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between lg:-mt-20 mt-27 sm:mt-8">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between lg:mt-10 mt-27 sm:mt-8">
           <div className="flex items-center mb-6 sm:mb-0">
             {/* Avatar Placeholder */}
             <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gray-300 flex items-center justify-center overflow-hidden">

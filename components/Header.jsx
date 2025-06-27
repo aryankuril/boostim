@@ -17,29 +17,33 @@ export const Header = () => {
   
   {/* Left - Logo */}
   <div className="flex items-center space-x-2 w-[200px]">
+     <Link href="/">
     <Image src="/images/logo.png" alt="boostim logo" width={130} height={33} />
+    </Link>
   </div>
 
   {/* Center - Navigation */}
   <div className="flex-grow">
     <nav className="hidden lg:flex items-center space-x-6">
-      <div className="flex items-center space-x-1 cursor-pointer hover:text-gray-700 text-black">
+      <div className="flex items-center space-x-1 cursor-pointer hover:text-gray-700 text-[#020407]">
         <span>Service</span>
         <ChevronDown size={14} />
       </div>
-      <div className="flex items-center space-x-1 cursor-pointer hover:text-gray-700 text-black">
+      <div className="flex items-center space-x-1 cursor-pointer hover:text-gray-700 text-[#020407]">
         <span>Agency</span>
         <ChevronDown size={14} />
       </div>
-      <div className="flex items-center space-x-1 cursor-pointer hover:text-gray-700 text-black">
+      <div className="flex items-center space-x-1 cursor-pointer hover:text-gray-700 text-[#020407]">
         <span>Case study</span>
         <ChevronDown size={14} />
       </div>
-      <div className="flex items-center space-x-1 cursor-pointer hover:text-gray-700 text-black">
+      <div className="flex items-center space-x-1 cursor-pointer hover:text-gray-700 text-[#020407]">
         <span>Resources</span>
         <ChevronDown size={14} />
       </div>
+       <Link href="/contact-us">
       <div className="cursor-pointer hover:text-gray-700 text-black">Contact</div>
+      </Link>
     </nav>
   </div>
 
@@ -71,23 +75,29 @@ export const Header = () => {
       <div className="absolute top-5 right-5 cursor-pointer" onClick={() => setMobileMenuOpen(false)}>
         <X size={28} />
       </div>
-      <div className="flex flex-col space-y-6 mt-16 text-left">
-        <div className="flex items-center space-x-2 cursor-pointer hover:text-black text-gray-700 text-xl">
+      <div className="flex flex-col space-y-6 text-[#020407] mt-16 text-left">
+        <div className="flex items-center space-x-2 text-[#020407] cursor-pointer hover:text-black  text-xl">
           <span>Service</span>
           <ChevronDown size={18} />
         </div>
-        <div className="flex items-center space-x-2 cursor-pointer hover:text-black text-gray-700 text-xl">
+        <div className="flex items-center space-x-2 cursor-pointer hover:text-black text-[#020407] text-xl">
           <span>Agency</span>
           <ChevronDown size={18} />
         </div>
-        <div className="flex items-center space-x-2 cursor-pointer hover:text-black text-gray-700 text-xl">
+        <div className="flex items-center space-x-2 cursor-pointer hover:text-black text-[#020407] text-xl">
           <span>Case study</span>
           <ChevronDown size={18} />
         </div>
-        <div className="flex items-center space-x-2 cursor-pointer hover:text-black text-gray-700 text-xl">
+        <div className="flex items-center space-x-2 cursor-pointer hover:text-black text-[#020407] text-xl">
           <span>Resources</span>
           <ChevronDown size={18} />
         </div>
+        <Link href="/contact-us" legacyBehavior>
+         
+          <a 
+           onClick={() => setMobileMenuOpen(false)}
+          className="flex items-center space-x-2 cursor-pointer hover:text-black text-[#020407] text-xl">Contact</a>
+        </Link>
        <Link href="/contact-us" legacyBehavior>
   <a
     onClick={() => setMobileMenuOpen(false)}

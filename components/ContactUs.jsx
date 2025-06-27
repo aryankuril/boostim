@@ -46,11 +46,11 @@ const ContactUs = () => {
     }
 
 
-    const handleSubmit = () => {
-        // your other functions here
-
-        shootRealisticConfetti();
-    }
+//     const handleSubmit = () => {
+//         // your other functions here
+// setFormData({ ...formData, [e.target.name]: e.target.value });
+//         shootRealisticConfetti();
+//     }
 
 
   const [subject, setSubject] = useState("general");
@@ -69,7 +69,6 @@ const ContactUs = () => {
 const sendEmail = async (e) => {
   e.preventDefault();
 
-  // First send email
   emailjs
     .send(
       "service_y2eid4a",
@@ -84,41 +83,40 @@ const sendEmail = async (e) => {
       },
       "PIxZ6ToR73scATBvY"
     )
-    .then(
-      (result) => {
-        console.log("Email Sent:", result.text);
-        alert("Message sent successfully!");
+    .then((result) => {
+      console.log("Email Sent:", result.text);
+      alert("Message sent successfully!");
 
-        // Now, also store data in MongoDB
-        fetch("/api/contact", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ ...formData, subject }),
+      fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...formData, subject }),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.success) {
+            console.log("Data saved to DB");
+            shootRealisticConfetti(); // Trigger confetti only after success
+          } else {
+            console.error("DB Save failed:", data.message);
+          }
         })
-          .then((res) => res.json())
-          .then((data) => {
-            if (data.success) {
-              console.log("Data saved to DB");
-            } else {
-              console.error("DB Save failed:", data.message);
-            }
-          })
-          .catch((err) => console.error("DB Error:", err));
+        .catch((err) => console.error("DB Error:", err));
 
-        setFormData({
-          firstName: "",
-          lastName: "",
-          email: "",
-          phone: "",
-          message: "",
-        });
-      },
-      (error) => {
-        console.log("Email Failed:", error.text);
-        alert("Failed to send message. Please try again.");
-      }
-    );
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+    })
+    .catch((error) => {
+      console.log("Email Failed:", error.text);
+      alert("Failed to send message. Please try again.");
+    });
 };
+
 
   return (
     <section className="min-h-screen px-4 py-12 flex items-center justify-center">
@@ -135,7 +133,7 @@ const sendEmail = async (e) => {
             className="md:w-1/2 bg-cover bg-center text-white p-8 relative"
             style={{ backgroundImage: `url('/images/contact-bg.png')` }}
           >
-            <div className="absolute inset-0 bg-black/70 z-0 rounded-2xl" />
+            <div className="absolute inset-0  z-0 rounded-2xl" />
             <div className="relative z-10">
               <h3 className="text-[28px] font-semibold mb-2">
                 Contact Information
@@ -185,7 +183,7 @@ const sendEmail = async (e) => {
                     value={formData.firstName}
                     onChange={handleChange}
                     required
-                    className="w-full mt-1 border-b border-gray-300 focus:outline-none focus:border-black"
+                    className="w-full mt-1 border-b border-gray-300 focus:outline-none text-[#011C2A] focus:border-black"
                   />
                 </div>
                 <div>
@@ -196,7 +194,7 @@ const sendEmail = async (e) => {
                     value={formData.lastName}
                     onChange={handleChange}
                     required
-                    className="w-full mt-1 border-b border-gray-300 focus:outline-none focus:border-black"
+                    className="w-full mt-1 border-b border-gray-300 focus:outline-none text-[#011C2A] focus:border-black"
                   />
                 </div>
                 <div>
@@ -207,27 +205,29 @@ const sendEmail = async (e) => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full mt-1 border-b border-gray-300 focus:outline-none focus:border-black"
+                    className="w-full mt-1 border-b border-gray-300 focus:outline-none text-[#011C2A] focus:border-black"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm text-gray-600 lg:mt-5 mt-1">
-                    Phone Number
-                  </label>
-                  <input
-                    type="tel"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    required
-                    className="w-full mt-1 border-b border-gray-300 focus:outline-none focus:border-black"
-                  />
-                </div>
+        <label className="block text-sm text-gray-600 lg:mt-5 mt-1">Phone Number</label>
+        <input
+          type="tel"
+          name="phone"
+          value={formData.phone}
+          onChange={handleChange}
+          required
+          pattern="[0-9]{10}"
+          minLength="10"
+          maxLength="10"
+          placeholder=""
+          className="w-full mt-1 border-b border-gray-300 focus:outline-none text-[#011C2A] focus:border-black"
+        />
+      </div>
               </div>
 
               <div>
                 <p className="text-sm text-gray-600 mb-2">Select Subject?</p>
-                <div className="flex flex-wrap gap-4">
+                <div className="flex flex-wrap gap-4 text-[#011C2A]">
                   {["General Inquiry", "Career Opportunities", "Billing & Payments"].map(
                     (option, i) => (
                       <label
@@ -258,14 +258,14 @@ const sendEmail = async (e) => {
                   onChange={handleChange}
                   required
                   placeholder="Write a message"
-                  className="w-full border-b border-gray-300 focus:outline-none focus:border-black resize-none"
+                  className="w-full border-b border-gray-300 focus:outline-none text-[#011C2A] focus:border-black resize-none"
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                 onClick={() => handleSubmit()}
-                className="inline-flex lg:ml-85 px-5 py-3 justify-center items-center gap-[25px] rounded-[70px] bg-[#99EA48] text-black font-semibold hover:bg-[#84CC16] transition"
+                //  onClick={() => handleSubmit()}
+                className="inline-flex lg:ml-83 px-5 py-3 justify-center items-center gap-[25px] rounded-[70px] bg-[#99EA48] text-black font-semibold hover:bg-[#84CC16] transition"
               >
                 Get Started
                 <span className="text-xl">

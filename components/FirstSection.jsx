@@ -31,16 +31,16 @@ const FirstSection = () => {
 
   {/* LEFT CONTENT */}
   <div className="flex-1 max-w-xl text-center lg:text-left z-10">
-    <h1 className="text-[36px]  sm:text-[48px] md:text-[60px] lg:text-[72px] leading-[100%] font-semibold tracking-[-2px] text-[#010205] mb-8 font-['Plus Jakarta Sans']">
+    <h1 className="text-[36px]  sm:text-[48px] md:text-[60px] lg:text-[72px] leading-[100%] font-semibold tracking-[-2px] text-[#010205] mb-8 ">
       Stay ahead of the curve with our forward-thinking
     </h1>
 
-    <p className="text-gray-600 mb-8 text-base sm:text-lg">
+    <p className="text-[#878C91] mb-8 text-base sm:text-lg">
       An award-winning SEO agency with disciplines in digital marketing, design, and website development, focused on understanding you.
     </p>
 
-    <div className="flex flex-row sm:flex-row items-center gap-6 mb-10 justify-center sm:justify-start">
-      <button className="bg-black text-white px-6 py-3 gap-3 rounded-full hover:bg-gray-900 transition flex items-center">
+    <div className="flex flex-row sm:flex-row items-center lg:gap-10 gap-8  mb-10 justify-center sm:justify-start">
+      <button className="bg-black text-white px-6 py-3 lg:gap-8 gap-2 rounded-full hover:bg-gray-900 transition flex items-center">
         Schedule Call
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
           <path d="M5 12H19M12 5L19 12L12 19" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -53,9 +53,10 @@ const FirstSection = () => {
     </div>
 
     <div className="flex flex-col sm:flex-row items-center gap-10 ">
-      <p className="text-black text-[14px] text-center sm:text-left">
-        Trusted by the world's <br /> biggest brands
-      </p>
+   <p className="text-[#010205] text-[14px] font-semibold leading-[160%] text-center sm:text-left font-['Plus_Jakarta_Sans']">
+  Trusted by the world's <br /> biggest brands
+</p>
+
       <div className="flex items-center gap-8">
         <img src="/images/Company logo-1.png" alt="Logo 1" className="h-6 sm:h-8" />
         <img src="/images/Company logo-2.png" alt="Logo 2" className="h-6 sm:h-8" />
